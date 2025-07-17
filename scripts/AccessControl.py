@@ -35,7 +35,7 @@ print(w3.is_connected())
 contract_address = "0xd385d6b0e0D7D96eB4a36e540c3946808691315d"  # Update with your contract address
 contract_abi = None  # Initialize the ABI variable
 # Load the ABI (Application Binary Interface) of the smart contract
-with open('C:/Users/Sara/Documents/access control smart contract/SSI project vf/build/contracts/QuantumSecureAccessControl.json') as f:
+with open('../build/contracts/QuantumSecureAccessControl.json') as f:
     info_json = json.load(f)
 contract_abi = info_json['abi']
 
