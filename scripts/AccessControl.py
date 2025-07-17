@@ -1,5 +1,4 @@
 import flask
-from flask_talisman import Talisman
 from flask import Flask, json, request, jsonify, render_template, url_for, redirect
 import numpy as np
 from random import randint
@@ -17,16 +16,13 @@ import urllib.request
 import urllib.parse
 import os
 from json_tricks import load
+
 from flask_restful import Api, Resource
 from web3 import Web3
 from web3.middleware import construct_sign_and_send_raw_middleware, geth_poa_middleware
 # Initialize Flask app
 app = Flask(__name__)
-@app.before_request
-def before_request():
-    if request.url.startswith("http://"):
-        url = request.url.replace("http://", "https://", 1)
-        return redirect(url, code=301)
+
 #app.config['JSONIFY_TIMEOUT'] = 3600
 
 # Configure Ethereum provider (Ganache)
@@ -36,10 +32,10 @@ w3 = Web3(Web3.HTTPProvider('http://localhost:7545', request_kwargs={'timeout': 
 print(w3.is_connected())
 
 # Contract ABI and address
-contract_address = "0x1A61e47c1F41ccB3db167F5f4980a388d6DA15a5"  # Update with your contract address
+contract_address = "0xd385d6b0e0D7D96eB4a36e540c3946808691315d"  # Update with your contract address
 contract_abi = None  # Initialize the ABI variable
 # Load the ABI (Application Binary Interface) of the smart contract
-with open('../build/contracts/QuantumSecureAccessControl.json') as f:
+with open('C:/Users/Sara/Documents/access control smart contract/SSI project vf/build/contracts/QuantumSecureAccessControl.json') as f:
     info_json = json.load(f)
 contract_abi = info_json['abi']
 
@@ -48,7 +44,7 @@ contract = w3.eth.contract(address=contract_address, abi=contract_abi)
 
 
 
-owner_private_key = "0xDCE77617913fEc0D64e8526C68d40782765D019E" # Update with your owner private address
+
 
 # Increase the timeout (default is 300 seconds)
 #app.config['SERVER_NAME'] = 'localhost:5000'  # Modify to match your server address
@@ -59,9 +55,6 @@ owner_private_key = "0xDCE77617913fEc0D64e8526C68d40782765D019E" # Update with y
 app = Flask(__name__,  template_folder='templates')
 #api =   Api(app)
 
-talisman = Talisman(app, content_security_policy=None)
-talisman.force_https = True
-talisman.force_file_save = True
 
 def text_to_bit_matrix(text):
     # Initialize an empty matrix
@@ -329,5 +322,5 @@ def generate_user():
 
 
 if __name__ == '__main__':
-    #app.run(debug=True, threaded=True, port=5000, host='localhost', use_reloader=False, **{'threaded': True})
-    app.run(ssl_context = ("localhost+2.pem", "localhost+2-key.pem"), debug = True)
+     #app.run(debug=True, threaded=True, port=5000, host='localhost', use_reloader=False, **{'threaded': True})
+     app.run(debug = True)
