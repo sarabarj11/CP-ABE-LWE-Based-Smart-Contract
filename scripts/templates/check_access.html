@@ -34,19 +34,17 @@
 	</style>
 </head>
   <body>
-	<div><h1>Grant Access</h1><div>
+	<div><h1>Home</h1><div>
     <div><ul>
-		<h2>Grant Access</a></h2>
-        <form action="/generate_user" method="POST" enctype="multipart/form-data">
-        <label for="user_address">Private Key of the Ethereum Address:</label></br>
+		<h2>Check Access</a></h2>
+		<form action="/check_access" method="POST" enctype="multipart/form-data">
+        <label for="user_address">User Ethereum Address:</label></br>
         <input type="text" name="user_address" required></br>
-        <label for="Attributes">User encrypted attributes:</label></br>
-        <input type="file" name="Attributes" required></br>
-		<label for="service">Aimed Service:</label></br>
+        <label for="service">Service Name:</label></br>
         <input type="text" name="service" required></br>
-		<label for="user_policy">User Policy:</label></br>
-        <input type="file" name="user_policy" required></br>
-		<input type="submit" value="Grant Access">
+		<label for="file">Private Key:</label></br>
+        <input type="file" name="file" required></br>
+        <input type="submit" value="Check Access">
 		</form>
 	  </ul>
 	<div>

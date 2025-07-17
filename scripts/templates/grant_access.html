@@ -37,15 +37,17 @@
 	<div><h1>Grant Access</h1><div>
     <div><ul>
 		<h2>Grant Access</a></h2>
-        <form action="/generate_user" method="POST" enctype="multipart/form-data">
-        <label for="user_address">Private Key of the Ethereum Address:</label></br>
-        <input type="text" name="user_address" required></br>
-        <label for="Attributes">User encrypted attributes:</label></br>
-        <input type="file" name="Attributes" required></br>
-		<label for="service">Aimed Service:</label></br>
+        <form action="/grant_access" method="POST" enctype="multipart/form-data">
+        <label for="private_key">Private Key related to the User Ethereum Address:</label></br>
+        <input type="text" name="private_key" required></br>
+        <label for="service">Service Name:</label></br>
         <input type="text" name="service" required></br>
+        <label for="Attributes">User Attributes:</label></br>
+        <input type="file" name="Attributes" required></br>
 		<label for="user_policy">User Policy:</label></br>
         <input type="file" name="user_policy" required></br>
+        <label for="pubkey">Public Key related to the service:</label></br>
+        <input type="file" name="pubkey" required></br>
 		<input type="submit" value="Grant Access">
 		</form>
 	  </ul>

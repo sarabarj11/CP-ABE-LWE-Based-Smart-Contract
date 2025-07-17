@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encryption Form</title>
+	<style>
+      body {
+		background-color: Black; /* Change the background color to light blue */
+        display: flex; /* Use flexbox layout */
+		align-items: center; /* Center vertically */
+		justify-content: center; /* Center horizontally */
+		height: 100vh; /* Set the height to the full viewport height */
+	  }
+	 
+
+	  .form-container {
+        margin: auto; /* Center the form container */
+        width: 100%; /* Set the width of the form container */
+        height: auto;
+		padding: 10px; /* Add some padding to the form container */
+        background-color: Gold; /* Set the background color of the form container to white */
+        border: 1px solid black; /* Add a border to the form container */
+		display: flex; /* Use flexbox layout */
+		align-items: center; /* Center vertically */
+		justify-content: center; /* Center horizontally */
+		margin-top: 20px;
+		
+      }
+      h1 {
+		text-align: center; /* Center the text */
+        width: 100%; /* Set the width of the form container */
+        height: auto;
+		padding: 10px;
+		background-color: Gold;
+		border: 1px solid black;
+		margin-bottom: 20px;
+	  }
+
+	</style>
+</head>
+<body>
+<div>
+<h1>The Public Key Generation Form:</h1>
+<div>
+
+<div class="form-container">
+
+<form action="/api/pubkeysgen/" method="POST" enctype="multipart/form-data">
+  <label for="file">The Private Key File: </label><br>
+  <input type="file" id="file" name="file"><br>
+  <input type="submit" value="Submit">
+</form>
+<div> 
+</body>
+</html>
