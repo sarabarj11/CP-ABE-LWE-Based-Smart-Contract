@@ -39,7 +39,7 @@ print(w3.is_connected())
 contract_address = "0x1A61e47c1F41ccB3db167F5f4980a388d6DA15a5"  # Update with your contract address
 contract_abi = None  # Initialize the ABI variable
 # Load the ABI (Application Binary Interface) of the smart contract
-with open('../build/contracts/QuantumSecureAccessControl3.json') as f:
+with open('../build/contracts/QuantumSecureAccessControl.json') as f:
     info_json = json.load(f)
 contract_abi = info_json['abi']
 
@@ -48,7 +48,7 @@ contract = w3.eth.contract(address=contract_address, abi=contract_abi)
 
 
 
-owner_private_key = "0xDCE77617913fEc0D64e8526C68d40782765D019E"
+owner_private_key = "0xDCE77617913fEc0D64e8526C68d40782765D019E" # Update with your owner private address
 
 # Increase the timeout (default is 300 seconds)
 #app.config['SERVER_NAME'] = 'localhost:5000'  # Modify to match your server address

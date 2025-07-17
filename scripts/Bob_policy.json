@@ -1,0 +1,8 @@
+{
+  "Name": "Bob",
+  "Cardiology": "None",
+  "Dermatology": "Name and Dermatological records",
+  "Psychiatry": "Name and Mental health records",
+  "Radiology": "Name and Radiological images and reports",
+  "Unauthorized service": "None"
+}
