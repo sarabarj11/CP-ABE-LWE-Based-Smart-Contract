@@ -19,7 +19,7 @@ from json_tricks import load
 
 from flask_restful import Api, Resource
 from web3 import Web3
-from web3.middleware import construct_sign_and_send_raw_middleware, geth_poa_middleware
+
 # Initialize Flask app
 app = Flask(__name__)
 
