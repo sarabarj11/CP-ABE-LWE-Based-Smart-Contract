@@ -41,6 +41,15 @@ Follow these steps to compile, deploy, and test the smart contracts:
     ```bash
     truffle test
     ```
+## Ganache Configuration
+
+**Steps:**
+1. Open Ganache and go to **CHAIN** tab
+2. Set **Hardfork** to **Petersburg**
+3. Set **Gas Price** to **1 WEI**
+4. Save and restart
+
+**Result:** Petersburg hardfork with minimal gas costs for development testing.
 
 ## Flask API Script (`AccessControl.py`)
 
